@@ -1,0 +1,8 @@
+div .weather {
+  .weather-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 10rem;
+  }
+}

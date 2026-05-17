@@ -1,0 +1,84 @@
+header {
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-branco);
+  box-shadow: 3px 0 3px var(--cor-preto);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logotipo-desktop {
+    display: block;
+  }
+
+  .logotipo-desktop img {
+    width: 8rem;
+  }
+
+  .logotipo-mobile {
+    display: none;
+  }
+
+  .menu-toggle {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  button.menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    button.menu-toggle {
+      display: block;
+    }
+
+    .logotipo-desktop {
+      display: none;
+    }
+
+    .logotipo-mobile {
+      display: block;
+    }
+
+    .logotipo-mobile img {
+      width: 4rem;
+    }
+
+    ul.nav-links {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--cor-branco);
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px var(--cor-preto);
+    }
+
+    ul.nav-links.closed {
+      display: none;
+    }
+
+    ul.nav-links.open {
+      display: block;
+    }
+  }
+}

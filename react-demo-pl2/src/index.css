@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kadwa', serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 6rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-preto);
+}
+
+/*VARIÁVEIS*/
+
+:root {
+  --cor-azul: #1B3577;
+  --cor-branco: #FFFFFF;
+  --cor-preto: #000000;
+  --cor-botao: #3865D7;
+  --cor-input--cinzento: #808080;
+  --cor--amarelo: #FFCB21;
+}
+
+p.small {
+  font-size: 0.8rem;
+}

@@ -1,0 +1,29 @@
+.missao,
+.objetivo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--cor-branco);
+  line-height: 1.75;
+}
+
+.missao {
+  background-image: url(./media/paisagem1.png);
+}
+
+.objetivo {
+  background-image: url(./media/paisagem2.png);
+}
+
+.objetivo h2,
+.missao h2 {
+  font-size: 1.5rem;
+}
+
+.objetivo p,
+.missao p {
+  font-size: 1rem;
+}

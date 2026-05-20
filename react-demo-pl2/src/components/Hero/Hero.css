@@ -2,12 +2,14 @@
 .objetivo {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2.5rem 6rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: var(--cor-branco);
   line-height: 1.75;
+  min-height: 25vh;
+  justify-content: center;
 }
 
 .missao {
@@ -20,10 +22,10 @@
 
 .objetivo h2,
 .missao h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .objetivo p,
 .missao p {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }

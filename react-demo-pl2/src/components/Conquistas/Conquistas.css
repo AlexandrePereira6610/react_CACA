@@ -1,0 +1,63 @@
+
+.conquistas {
+    display: flex;
+    background-image:  url(/paisagem2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.conquistas p {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.conquistas-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 90%;
+}
+
+.chart_types {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conquistas-container button {
+    color: white;
+    border: none;
+    background-color: #004AAD;
+    font-size: clamp(.8rem, 2.6vw, 2.6rem);
+    padding-inline: .5em;
+    margin: 1rem 1rem 1rem 0;
+    cursor: pointer;
+    padding: .7rem 1rem;
+}
+
+.conquistas-container button:hover {
+    background-color: #0077ff;
+    transform: scale(1.1);
+    transition: all .2s ease;
+}
+
+.grafico {
+    width: 100%;
+    height: 30rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

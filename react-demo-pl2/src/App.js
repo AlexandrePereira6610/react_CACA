@@ -3,6 +3,7 @@ import Header from './components/Header/Index';
 import Hero from './components/Hero/Index';
 import Investigacao from './components/Investigacao/Index';
 import Parcerias from './components/Parcerias/Index';
+import Conquistas from './components/Conquistas/Index';
 import Weather from './components/Weather/Index';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Hero id="objetivo" title="Objetivo" description="Apoiar os seus associados e servir como ponto de referência para estes, com um foco em instituições clínicas e académicas locais e em alunos com interesse nestas áreas." />
       <Investigacao />
       <Parcerias/>
+      <Conquistas/>
       <Weather />
     </div>
   );

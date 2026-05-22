@@ -4,6 +4,7 @@ import Hero from './components/Hero/Index';
 import Investigacao from './components/Investigacao/Index';
 import Parcerias from './components/Parcerias/Index';
 import Conquistas from './components/Conquistas/Index';
+import Mapa from './components/Mapa/Index';
 import Weather from './components/Weather/Index';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Investigacao />
       <Parcerias/>
       <Conquistas/>
+      <Mapa/>
       <Weather />
     </div>
   );

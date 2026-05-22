@@ -7,7 +7,9 @@ import Conquistas from './components/Conquistas/Index';
 import Mapa from './components/Mapa/Index';
 import Newsletter from './components/Newsletter/Index';
 import Noticias from './components/Noticias/Index';
+import Contactos from './components/Contactos/Index';
 import Weather from './components/Weather/Index';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
       <Mapa/>
       <Newsletter/>
       <Noticias/>
+      <Contactos/>
       <Weather />
     </div>
   );

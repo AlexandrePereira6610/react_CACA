@@ -6,6 +6,7 @@ import Parcerias from './components/Parcerias/Index';
 import Conquistas from './components/Conquistas/Index';
 import Mapa from './components/Mapa/Index';
 import Weather from './components/Weather/Index';
+import Newsletter from './components/Newsletter/Index';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Parcerias/>
       <Conquistas/>
       <Mapa/>
+      <Newsletter/>
       <Weather />
     </div>
   );

@@ -8,8 +8,8 @@ import Mapa from './components/Mapa/Index';
 import Newsletter from './components/Newsletter/Index';
 import Noticias from './components/Noticias/Index';
 import Contactos from './components/Contactos/Index';
-import Weather from './components/Weather/Index';
-
+import Eventos from './components/Eventos/Index';      
+import EventosAdm from './components/Eventos/IndexAdm'; 
 
 
 function App() {
@@ -21,11 +21,13 @@ function App() {
       <Investigacao />
       <Parcerias/>
       <Conquistas/>
+      <Eventos/>
       <Mapa/>
       <Newsletter/>
       <Noticias/>
       <Contactos/>
-      <Weather />
+      <EventosAdm/>
+      
     </div>
   );
 }

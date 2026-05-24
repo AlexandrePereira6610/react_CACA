@@ -23,8 +23,8 @@ function App() {
       <Conquistas/>
       <Eventos/>
       <Mapa/>
-      <Newsletter/>
       <Noticias/>
+      <Newsletter/>
       <Contactos/>
       <EventosAdm/>
       

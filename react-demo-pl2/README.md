@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# CACA - Centro Académico Clínico dos Açores
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Identificação do Grupo
+- Alexandre Pereira - 2023108733
+- Joana Rego - 2023103196
+- Pedro Anselmo - 2023109163
+- Tomás Moreira - 2023108679
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
 
-### `npm start`
+### Frontend
+- **React** - Biblioteca para UI
+- **React Router DOM** - Navegação e rotas protegidas
+- **Framer Motion** - Animações fluidas
+- **Leaflet** - Mapas interativos
+- **Chart.js** - Visualização de dados
+- **IndexedDB** - Armazenamento local (eventos e newsletter)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend
+- **Node.js + Express** - API REST
+- **MongoDB Atlas** - Base de dados na nuvem
+- **JWT** - Autenticação segura
+- **bcryptjs** - Encriptação de passwords
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### APIs Externas
+- Open-Meteo (previsão do tempo)
+- RSS2JSON (notícias de saúde)
+- Nominatim/OpenStreetMap (geocodificação)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Arquitetura da Aplicação
+Frontend (React) ←→ API (Express) ←→ MongoDB (Atlas)
+↓ ↓
+IndexedDB JWT Auth
+(cache local) (validação)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades Implementadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Refatorizadas (PEI1, PEI2, PEI3)
+- Landing page com componentes React modulares
+- Animações com Framer Motion (scroll reveals, hover effects)
+- CRUD de eventos com IndexedDB
+- Newsletter com IndexedDB
+- Mapas interativos com Leaflet
+- Consumo de APIs externas (meteorologia, notícias RSS)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Novas (API de Utilizadores)
+- Registo de novos utilizadores
+- Login com JWT
+- Gestão de perfil (editar nome, contacto, instituição)
+- Sistema de permissões (Admin vs Utilizador regular)
+- Rotas protegidas no frontend
+- Admin pode ver/editar/remover todos os utilizadores
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Como Correr a Aplicação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pré-requisitos
+- Node.js 
+- MongoDB Atlas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend
+```bash
+cd backend
+npm install
+npm run dev
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O servidor irá correr em http://localhost:5000
 
-## Learn More
+Frontend
+bash
+npm install
+npm start
+A aplicação irá abrir em http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Variáveis de Ambiente (backend/.env)
+text
+PORT=5000
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/caca_db
+JWT_SECRET=superSecretKeyCACA2026
+JWT_EXPIRE=7d
+Credenciais para Teste
+Tipo	Email	Password
+Utilizador Normal	marmita@teste.com	123456
+Administrador	admin@caca.com	admin123
+Nota: O administrador precisa ter o campo role: "admin" na base de dados.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Segurança Implementada
+Passwords hasheadas com bcrypt
+Tokens JWT com expiração
+Validação de inputs (express-validator)
+Rotas protegidas no frontend e backend
+Acessibilidade e Responsividade
+Navegação por teclado
+Media queries para mobile (320px - 768px)
+Layout flexível com grid/flexbox
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

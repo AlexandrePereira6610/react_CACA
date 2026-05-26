@@ -1,84 +1,144 @@
 header {
-  z-index: 100;
-  position: sticky;
-  top: 0;
-  background-color: var(--cor-branco);
-  box-shadow: 3px 0 3px var(--cor-preto);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-
-  .header-container {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-branco);
+    box-shadow: 3px 0 3px var(--cor-preto);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-  }
+    padding: 1rem;
 
-  .logotipo-desktop {
-    display: block;
-  }
-
-  .logotipo-desktop img {
-    width: 8rem;
-  }
-
-  .logotipo-mobile {
-    display: none;
-  }
-
-  .menu-toggle {
-    border: none;
-    background: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  ul.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
-
-  button.menu-toggle {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    button.menu-toggle {
-      display: block;
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .logotipo-desktop {
-      display: none;
+        display: block;
+    }
+
+    .logotipo-desktop img {
+        width: 8rem;
     }
 
     .logotipo-mobile {
-      display: block;
+        display: none;
     }
 
-    .logotipo-mobile img {
-      width: 4rem;
+    .menu-toggle {
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 
     ul.nav-links {
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: var(--cor-branco);
-      width: 200px;
-      padding: 1rem;
-      box-shadow: 0 2px 5px var(--cor-preto);
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
     }
 
-    ul.nav-links.closed {
-      display: none;
+    /* Estilos para links do menu */
+    ul.nav-links li a {
+        text-decoration: none;
+        color: var(--cor-preto);
+        transition: color 0.3s ease;
     }
 
-    ul.nav-links.open {
-      display: block;
+    ul.nav-links li a:hover {
+        color: var(--cor-azul);
     }
-  }
+
+    /* Botão de logout - estilo igual aos links */
+    .logout-btn {
+        background: none;
+        border: none;
+        color: var(--cor-preto);
+        font-size: inherit;
+        font-family: inherit;
+        cursor: pointer;
+        padding: 0;
+        transition: color 0.3s ease;
+    }
+
+    .logout-btn:hover {
+        color: var(--cor-azul);
+    }
+
+    /* Separador entre links normais e de autenticação */
+    .nav-divider {
+        width: 1px;
+        height: 20px;
+        background-color: var(--cor-cinza-claro);
+        margin: 0 10px;
+    }
+
+    button.menu-toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        button.menu-toggle {
+            display: block;
+        }
+
+        .logotipo-desktop {
+            display: none;
+        }
+
+        .logotipo-mobile {
+            display: block;
+        }
+
+        .logotipo-mobile img {
+            width: 4rem;
+        }
+
+        ul.nav-links {
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: var(--cor-branco);
+            width: 250px;
+            padding: 1rem;
+            box-shadow: 0 2px 5px var(--cor-preto);
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        ul.nav-links.closed {
+            display: none;
+        }
+
+        ul.nav-links.open {
+            display: flex;
+        }
+
+        /* Estilos para o separador em mobile */
+        .nav-divider {
+            width: 100%;
+            height: 1px;
+            background-color: var(--cor-cinza-claro);
+            margin: 10px 0;
+        }
+
+        /* Botão de logout em mobile - ocupa toda largura */
+        .logout-btn {
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
+
+/* Estilos adicionais para desktop - fora do media query */
+@media (min-width: 769px) {
+    header ul.nav-links li a,
+    header .logout-btn {
+        white-space: nowrap;
+    }
 }

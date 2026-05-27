@@ -74,11 +74,11 @@ npm run dev
 O servidor irá correr em http://localhost:5000
 
 Frontend
-bash
 npm install
+npm install react react-dom react-scripts
+npm install web-vitals
 npm start
 A aplicação irá abrir em http://localhost:3000
-
 Variáveis de Ambiente (backend/.env)
 text
 PORT=5000

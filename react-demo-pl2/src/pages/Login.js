@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Login.css';
 import { useAuth } from '../contexts/AuthContext';
 import { motion } from 'framer-motion';
 
@@ -60,75 +61,6 @@ export default function Login() {
                     Não tem conta? <a href="/register">Registe-se</a>
                 </p>
             </div>
-
-            <style jsx>{`
-        .login-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 80vh;
-          padding: 20px;
-        }
-        .login-card {
-          background: white;
-          padding: 40px;
-          border-radius: 16px;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-          width: 100%;
-          max-width: 400px;
-        }
-        .login-card h1 {
-          text-align: center;
-          margin-bottom: 30px;
-          color: #2c3e50;
-        }
-        .form-group {
-          margin-bottom: 20px;
-        }
-        .form-group label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: 500;
-          color: #34495e;
-        }
-        .form-group input {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          font-size: 16px;
-        }
-        .btn-login {
-          width: 100%;
-          padding: 12px;
-          background: #3498db;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background 0.3s;
-        }
-        .btn-login:hover {
-          background: #2980b9;
-        }
-        .error-message {
-          background: #fee;
-          color: #c00;
-          padding: 10px;
-          border-radius: 8px;
-          margin-bottom: 20px;
-          text-align: center;
-        }
-        .register-link {
-          text-align: center;
-          margin-top: 20px;
-        }
-        .register-link a {
-          color: #3498db;
-          text-decoration: none;
-        }
-      `}</style>
         </motion.div>
     );
 }

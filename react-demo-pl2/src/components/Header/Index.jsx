@@ -52,7 +52,7 @@ export default function Header() {
                     <li><a href="#Noticias" onClick={closeMenu}>Noticias</a></li>
                     <li><a href="#Contactos" onClick={closeMenu}>Contactos</a></li>
 
-                    {/* Linha separadora (opcional - adiciona CSS se quiseres) */}
+                    {/*  */}
                     <li className="nav-divider"></li>
 
                     {/* Links de autenticação - aparecem conforme o estado do login */}

@@ -13,7 +13,7 @@ export default function Conquistas() {
     const canvasRef = useRef(null);
     const chartInstance = useRef(null);
 
-    // ✅ MOVI O useInView PARA DENTRO DO COMPONENTE
+    //  MOVI O useInView PARA DENTRO DO COMPONENTE
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const loadData = async (file, title) => {
